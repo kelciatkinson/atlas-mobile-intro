@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react";
 import { Text, View, StyleSheet, Alert } from "react-native";
 import Swipeable from "react-native-gesture-handler/ReanimatedSwipeable";
 import { useActivitiesContext } from "./ActivitiesProvider";
@@ -63,6 +64,7 @@ export default function Activity({
   return (
     <View style={styles.wrapper}>
       <Swipeable
+        ref={swipeableRef}
         renderLeftActions={() => <Action text="Delete" />}
         renderRightActions={() => <Action text="Delete" />}
         onSwipeableOpen={handleDelete}
