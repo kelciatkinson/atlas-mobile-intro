@@ -31,6 +31,6 @@ export function ActivitiesProvider({
       }}
     >
       {children}
-    </ActivitiesContext.ProviderAdd>
+    </ActivitiesContext.Provider>
   );
 }
